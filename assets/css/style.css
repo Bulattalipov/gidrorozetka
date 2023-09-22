@@ -869,8 +869,6 @@ body {
   font-weight: 400;
   color: var(--color-blue);
 }
-.about-us__item-info-user-spec {
-}
 .about-us__item-img {
   position: relative;
   width: 28.625rem;
@@ -890,6 +888,7 @@ body {
 }
 
 
+/* conditions section */
 
 .conditions {
   padding: 6.5625rem 0;
