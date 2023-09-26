@@ -16,7 +16,6 @@
     href="https://degorov.ru/1base/wp-content/themes/Goodini/assets/css/anim.css" />
 
   <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/slick.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -43,12 +42,12 @@
               </div>
             </a>
             <a class="header__contacts-item" href="#">
-              <div class="icon">
+              <div class="icon icon--telegram">
                 <img src="assets/images/telegrap.svg" alt="telegrap">
               </div>
             </a>
             <a class="header__contacts-item" href="#">
-              <div class="icon">
+              <div class="icon icon--email">
                 <img src="assets/images/email.svg" alt="email">
               </div>
             </a>
@@ -67,7 +66,7 @@
               </a>
             </div>
             <div class="header__telephone-icon">
-              <div class="icon">
+              <div class="icon icon--telephone">
                 <img src="assets/images/telephone.svg" alt="telephone">
               </div>
             </div>
@@ -158,7 +157,7 @@
               <span>Полный спектр</span> услуг <br>
               по резке и производству изделий
             </h2>
-            <p class="services__desc">
+            <p class="services__desc desc">
               Работаем с ювелирной точностью — наши срезы полотна не отличить от заводских
             </p>
             <ul class="services__items">
@@ -276,7 +275,8 @@
         </div>
       </section>
 
-      <section class="causes" style="background-image: url('assets/images/causes/bg-img.png')">
+      <section class="causes">
+        <img class="causes__bg-img" src="assets/images/causes/bg-img.png" alt="img">
         <div class="container">
           <div class="causes__wrapper">
             <div class="causes__title">
@@ -569,7 +569,7 @@
               <span>Предоставляем скидки</span> <br>
               для заказов от 300 погонных метров
             </h2>
-            <p class="conditions__desc">
+            <p class="conditions__desc desc">
               Предлагаем удобные условия сотрудничества
             </p>
             <div class="conditions__items">
@@ -624,7 +624,7 @@
               <span>Точность резки</span> <br>
               без ущерба для материала
             </h2>
-            <p class="technology__desc">
+            <p class="technology__desc desc">
               Технология, которая решает все проблемы
             </p>
             <div class="technology__items">
@@ -727,7 +727,7 @@
                 <span>Закажите бесплатный</span> <br>
                 выезд мастера <br> для замеров и консультации
               </h2>
-              <p class="connection__desc">
+              <p class="connection__desc desc">
                 Заботимся о клиентах и работаем на результат
               </p>
               <ul class="connection__list">
@@ -752,42 +752,44 @@
               </ul>
             </div>
             <div class="connection__application">
-              <div class="connection__application-title">
-                Оставьте заявку.
+              <div class="connection__application-wrapper">
+                <div class="connection__application-title">
+                  Оставьте заявку.
+                </div>
+                <p class="connection__application-desc">
+                  Мы свяжемся с вами,
+                  чтобы подобрать удобное
+                  время для выезда.
+                </p>
+                <form class="connection__application-form" action="#">
+                  <div class="input">
+                    <div class="input__text">
+                      Ваше имя
+                    </div>
+                    <input class="input__element" type="text" placeholder="Например Иван">
+                  </div>
+                  <div class="input">
+                    <div class="input__text">
+                      Ваш номер
+                    </div>
+                    <input class="input__element" type="text" placeholder="+7 (__) __-__-__">
+                  </div>
+                  <div class="input">
+                    <div class="input__text">
+                      Комментарий
+                    </div>
+                    <input class="input__element" type="text" placeholder="Введите текст">
+                  </div>
+                  <label class="connection__application-form-label">
+                    <input type="checkbox">
+                    <span class="connection__application-form-ckeckbox"></span>
+                    Я даю свое согласие с политикой конфиденциальности в отношении обработки персональных данных
+                  </label>
+                  <button class="connection__application-form-btn button" type="submit">
+                    Оставить заявку
+                  </button>
+                </form>
               </div>
-              <p class="connection__application-desc">
-                Мы свяжемся с вами,
-                чтобы подобрать удобное
-                время для выезда.
-              </p>
-              <form class="connection__application-form" action="#">
-                <div class="input">
-                  <div class="input__text">
-                    Ваше имя
-                  </div>
-                  <input class="input__element" type="text" placeholder="Например Иван">
-                </div>
-                <div class="input">
-                  <div class="input__text">
-                    Ваш номер
-                  </div>
-                  <input class="input__element" type="text" placeholder="+7 (__) __-__-__">
-                </div>
-                <div class="input">
-                  <div class="input__text">
-                    Комментарий
-                  </div>
-                  <input class="input__element" type="text" placeholder="Введите текст">
-                </div>
-                <label class="connection__application-form-label">
-                  <input type="checkbox">
-                  <span class="connection__application-form-ckeckbox"></span>
-                  Я даю свое согласие с политикой конфиденциальности в отношении обработки персональных данных
-                </label>
-                <button class="connection__application-form-btn button" type="submit">
-                  Оставить заявку
-                </button>
-              </form>
             </div>
           </div>
         </div>
@@ -823,23 +825,23 @@
               <a class="footer__contacts-item-link" href="tel:+79126021927">
                 <span>Тел: </span> +7(912) 602-19-27
               </a>
-              <div class="icon">
-                <img src="assets/images/footer/telephone.svg" alt="email">
+              <div class="icon icon--telephone-small">
+                <img src="assets/images/footer/telephone.svg" alt="telephone">
               </div>
             </div>
             <div class="footer__contacts-item">
               <div class="footer__contacts-item-link">
                 <span>Адрес: </span>г.Екатеринбург, ул.5
               </div>
-              <div class="icon">
-                <img src="assets/images/footer/email.svg" alt="email">
+              <div class="icon icon--location">
+                <img src="assets/images/footer/location.svg" alt="location">
               </div>
             </div>
             <div class="footer__contacts-item">
               <a class="footer__contacts-item-link" href="mailto: uesgroup@yandex.ru">
                 <span>Email: </span> uesgroup@yandex.ru
               </a>
-              <div class="icon">
+              <div class="icon icon--email-small">
                 <img src="assets/images/footer/email.svg" alt="email">
               </div>
             </div>
