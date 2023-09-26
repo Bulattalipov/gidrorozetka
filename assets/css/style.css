@@ -879,15 +879,45 @@ body {
 .about-us {
   padding: 6.5625rem 0;
 }
+
+.about-us::before {
+  position: absolute;
+  top: -5.3rem;
+  right: 50%;
+  transform: translateX(-75%);
+  width: 24.2rem;
+  height: 21.4rem;
+  background-image: url(../images/about-us/lines-1.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  z-index: 0;
+}
+
+.about-us::after {
+  position: absolute;
+  top: 2.3rem;
+  right: 50%;
+  transform: translateX(140%);
+  width: 31rem;
+  height: 24.56rem;
+  background-image: url(../images/about-us/lines-2.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: '';
+  z-index: 0;
+}
+
 .about-us__title {
   text-align: center;
 }
-.title {
-}
+
 .about-us__items {
+  position: relative;
   max-width: 85.8125rem;
   margin: 0 auto;
   margin-top: -3.8rem;
+  z-index: 1;
 }
 .about-us__item {
   display: flex;
@@ -1775,6 +1805,11 @@ a.footer__contacts-item-link:hover + .icon{
   .connection__image.connection__image--tape {
     top: 15rem;
     right: 9rem;
+  }
+
+  .about-us::before,
+  .about-us::after {
+    display: none;
   }
 
 }
