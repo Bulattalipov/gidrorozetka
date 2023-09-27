@@ -113,10 +113,10 @@ body {
 
 /* components */
 
-.button {
+.btn {
   display: inline-flex;
   justify-content: center;
-  padding: 1.25rem 3.875rem;
+  /* padding: 1.25rem 3.875rem; */
   font-size: 1.125rem;
   border-radius: 6rem;
   background: linear-gradient(270deg, #2C62B4 12.55%, rgba(14, 0, 183, 0.85) 118.03%);
@@ -124,17 +124,18 @@ body {
   transition: var(--transition);
   border: none;
   cursor: pointer;
+  margin-top: 2rem;
 }
 
-.button span {
+.btn span {
   color: var(--color-white);
 }
 
-.button:hover {
+.btn:hover {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
-.button:active {
+.btn:active {
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
@@ -156,14 +157,22 @@ body {
   font-size: 1rem;
 }
 
-.title {
+h2 {
   font-family: 'RussoOne', sans-serif;
   font-weight: 400;
   font-size: 3rem;
 }
 
-.title span {
+h2 span {
   color: var(--color-blue);
+}
+
+h1 {
+  font-family: 'RussoOne', sans-serif;
+  font-weight: 400;
+  font-size: 4rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
 }
 
 
@@ -256,14 +265,6 @@ body {
   padding-bottom: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.intro__title {
-  font-family: 'RussoOne', sans-serif;
-  font-weight: 400;
-  font-size: 4rem;
-  color: var(--color-white);
-  margin-bottom: 1rem;
 }
 
 .intro__subtitle {
@@ -441,7 +442,7 @@ body {
   z-index: 2;
 }
 
-.services__title {
+.services h2 {
   text-align: center;
   margin-bottom: 1.875rem;
 }
@@ -541,7 +542,7 @@ body {
   margin-right: 2.1875rem;
 }
 
-.causes__title-text {
+.causes {
   max-width: 40rem;
   font-family: 'RussoOne', sans-serif;
   font-weight: 400;
@@ -695,7 +696,7 @@ body {
   align-items: center;
 }
 
-.portfolio__title {
+.portfolio h2 {
   max-width: 38.1875rem;
   text-align: center;
   margin: 0 auto;
@@ -773,6 +774,15 @@ body {
   margin-top: 3.875rem;
 }
 
+.portfolio__btn span {
+  display: flex;
+  align-items: center;
+}
+
+.portfolio__btn svg {
+  margin: 0 0.5rem;
+}
+
 
 
 
@@ -782,7 +792,7 @@ body {
   padding: 6.5625rem 0;
   background-color: var(--color-dark-blue);
 }
-.quality__title {
+.quality h2 {
   max-width: 70.4rem;
   color: var(--color-white);
   margin-bottom: 4.4375rem;
@@ -908,7 +918,7 @@ body {
   z-index: 0;
 }
 
-.about-us__title {
+.about-us h2 {
   text-align: center;
 }
 
@@ -1017,7 +1027,7 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.conditions__title {
+.conditions h2 {
   color: var(--color-white);
   text-align: center;
   margin-bottom: 1.875rem;
@@ -1046,8 +1056,10 @@ body {
   padding: 2.625rem;
 }
 .conditions__item-img {
+  display: flex;
+  align-items: center;
   height: 16.5rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1.275rem;
 }
 .conditions__item-title {
   font-size: 1.375rem;
@@ -1087,7 +1099,7 @@ body {
   z-index: 3;
 }
 
-.technology__title {
+.technology h2 {
   margin-bottom: 1.875rem;
   text-align: center;
 }
@@ -1214,7 +1226,7 @@ body {
   content: '';
 }
 
-.review__title {
+.review h2 {
   color: var(--color-white);
   margin-bottom: 2.5rem;
 }
@@ -1338,7 +1350,7 @@ body {
   max-width: 42.5rem;
 }
 
-.connection__title {
+.connection h2 {
   margin-bottom: 2.5rem;
 }
 
@@ -1586,9 +1598,48 @@ a.footer__contacts-item-link:hover + .icon{
   color: #ABAAAA;
 }
 
+.error-block {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.error-block__wrapper {
+  width: 40.31rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
 
 
-@media (min-width: 1920px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1921px) {
   html {
     font-size: calc(16px * 1.1334);
   }
@@ -1637,12 +1688,12 @@ a.footer__contacts-item-link:hover + .icon{
     padding-top: 14rem;
   }
 
-  .intro__title {
+  h1 {
     font-size: 3.2rem;
     margin-bottom: 0.9rem;
   }
 
-  .title {
+  h2 {
     font-size: 2.8rem;
   }
 
@@ -1759,10 +1810,6 @@ a.footer__contacts-item-link:hover + .icon{
 
   .conditions__item {
     padding: 2rem;
-  }
-
-  .conditions__item-img {
-    height: 12rem;
   }
 
   .conditions__item-title {
@@ -2014,7 +2061,7 @@ a.footer__contacts-item-link:hover + .icon{
     padding-top: 4.5rem;
   }
 
-  .title {
+  h2 {
     font-size: 2.5rem;
   }
 
@@ -2039,7 +2086,7 @@ a.footer__contacts-item-link:hover + .icon{
     background-position: 35%;
   }
 
-  .intro__title {
+  h1 {
     font-size: 2.9rem;
     margin-bottom: 0.7rem;
   }
@@ -2307,7 +2354,7 @@ a.footer__contacts-item-link:hover + .icon{
     padding-top: 4.5rem;
   }
 
-  .title {
+  h2 {
     font-size: 2.1rem;
   }
 
@@ -2320,7 +2367,7 @@ a.footer__contacts-item-link:hover + .icon{
     padding: 0 16px;
   }
 
-  .button {
+  .btn {
     padding: 1rem 1.3rem;
     font-size: 0.9rem;
   }
@@ -2329,7 +2376,7 @@ a.footer__contacts-item-link:hover + .icon{
     padding-top: 11rem;
   }
 
-  .intro__title {
+  h1 {
     font-size: 2.6rem;
     margin-bottom: 0.7rem;
   }
@@ -2769,7 +2816,7 @@ a.footer__contacts-item-link:hover + .icon{
     padding-top: 3rem;
   }
 
-  .title {
+  h2 {
     font-size: 1.8rem;
   }
 
@@ -2781,7 +2828,7 @@ a.footer__contacts-item-link:hover + .icon{
     background-position: 35%;
   }
 
-  .intro__title {
+  h1 {
     font-size: 2.4rem;
     margin-bottom: 0.6rem;
   }
@@ -2888,7 +2935,7 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 @media (max-width: 413px) {
-  .intro__title {
+  h1 {
     font-size: 2rem;
     margin-bottom: 0.6rem;
   }
