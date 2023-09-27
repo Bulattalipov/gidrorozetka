@@ -1599,20 +1599,103 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 .error-block {
-  height: 100vh;
+  min-height: 100vh;
+  /* height: 100vh; */
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  background-size: cover;
+  padding-top: 5rem;
+  padding-bottom: 2.5625rem;
 }
 
 .error-block__wrapper {
   width: 40.31rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin: 0 auto;
 }
 
+.error-block h2 {
+  color: var(--color-white);
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
+.error-block__desc {
+  color: var(--color-white);
+  font-size: 1.875rem;
+  text-align: center;
+}
 
+.error-block .btn{
+  align-self: center;
+}
+
+.error-block__img {
+  margin-top: 7.375rem;
+}
+
+.error-block__img img {
+  width: 40.31225rem;
+  height: 23.3125rem;
+  object-fit: contain;
+}
+
+.gratitude {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  background-position: center;
+}
+
+.gratitude::before {
+  position: absolute;
+  top: -4rem;
+  left: -1rem;
+  width: 27.1875rem;
+  height: 24.3125rem;
+  background-image: url("../images/gratitude/machine.png");
+  background-size: cover;
+  content: '';
+  z-index: 0;
+}
+
+.gratitude__box {
+  position: relative;
+  margin: 0 6.25rem;
+}
+
+.gratitude__box::after {
+  position: absolute;
+  top: -8rem;
+  left: 1rem;
+  width: 43rem;
+  height: 18.25rem;
+  background-image: url("../images/gratitude/lines.svg");
+  background-size: cover;
+  content: '';
+  z-index: 0;
+}
+
+.gratitude h2 {
+  margin-bottom: 2.375rem;
+}
+
+.gratitude__desc {
+  max-width: 39.875rem;
+  font-size: 1.875rem;
+}
+
+.gratitude__img-people {
+  position: absolute;
+  bottom: -6rem;
+  right: -15rem;
+  width: 109.5625rem;
+  height: 73rem;
+  object-fit: contain;
+}
 
 
 
@@ -1650,7 +1733,7 @@ a.footer__contacts-item-link:hover + .icon{
 
 
   .container-2 {
-    max-width: cacl(1744px *1.1334);
+    max-width: cacl(1744px * 1.1334);
   }
 }
 
@@ -1859,6 +1942,17 @@ a.footer__contacts-item-link:hover + .icon{
     display: none;
   }
 
+  .gratitude::before {
+    display: none;
+  }
+
+  .gratitude__img-people {
+    bottom: -6rem;
+    right: -32rem;
+    width: 85rem;
+    height: 39rem;
+  }
+
 }
 
 @media (max-width: 1299px) {
@@ -2039,6 +2133,33 @@ a.footer__contacts-item-link:hover + .icon{
     margin-top: 3rem;
     padding: 2rem;
     border-radius: 0.45rem
+  }
+
+  .gratitude__img-people {
+    position: static;
+  }
+
+  .gratitude {
+    padding-top: 14rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .gratitude .container-2 {
+    display: flex;
+    flex-direction: ;
+    justify-content: center;
+  }
+
+  .gratitude__img-people {
+    display: flex;
+    align-items: flex-end;
+    width: auto;
+    height: auto;
+  }
+
+  .gratitude__box {
+    margin: 0;
   }
 }
 
@@ -2333,6 +2454,14 @@ a.footer__contacts-item-link:hover + .icon{
     gap: 1.2rem;
   }
 
+  .error-block__img {
+    margin-top: 4rem;
+  }
+
+  .error-block__img img {
+    width: 32rem;
+  }
+
 }
 
 @media (max-width: 767px) {
@@ -2368,7 +2497,6 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .btn {
-    padding: 1rem 1.3rem;
     font-size: 0.9rem;
   }
 
@@ -2637,6 +2765,24 @@ a.footer__contacts-item-link:hover + .icon{
   .connection__application-desc {
     font-size: 1.4rem;
     margin-bottom: 1.5rem;
+  }
+
+  .error-block__wrapper {
+    width: auto;
+  }
+
+  .error-block__img {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .error-block__img img{
+    width: 100%;
+    height: auto;
+  }
+
+  .gratitude__box::after {
+    display: none;
   }
 
 }
@@ -2931,6 +3077,10 @@ a.footer__contacts-item-link:hover + .icon{
 
   .connection__application {
     padding: 1rem;
+  }
+
+  .error-block {
+    align-items: center;
   }
 }
 
