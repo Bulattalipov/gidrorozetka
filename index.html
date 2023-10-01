@@ -15,7 +15,6 @@
   <link rel="stylesheet" type="text/css"
     href="https://degorov.ru/1base/wp-content/themes/Goodini/assets/css/anim.css" />
 
-  <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/style.css">
 
@@ -78,27 +77,27 @@
     <main class="main">
       <section class="intro" style="background-image: url('assets/images/intro-img.jpg');">
         <div class="container">
-          <h1 class="intro__title">
-            Гидроабразивная <br> резка керамогранита
-          </h1>
-          <p class="intro__subtitle">
-            любого формата от 1 часа
-          </p>
-          <ul class="intro__list">
-            <li class="intro__list-item">
-              Без сколов и трещин
-            </li>
-            <li class="intro__list-item">
-              Без потерь на расходах материала
-            </li>
-            <li class="intro__list-item">
-              100% гарантия качества
-            </li>
-          </ul>
-          <p class="intro__desc">
-            Режем кафель, крупноформатный керамогранит и натуральный камень точно по вашим размерам 
-          </p>
-          <a class="button" href="#">
+          <div class="intro__wrapper">
+            <h1>
+              Гидроабразивная <br> резка керамогранита
+              <span>любого формата от 1&nbsp;часа</span>
+            </h1>
+            <ul>
+              <li>
+                Без сколов и трещин
+              </li>
+              <li>
+                Без потерь на расходах материала
+              </li>
+              <li>
+                100% гарантия качества
+              </li>
+            </ul>
+            <p>
+              Режем кафель, крупноформатный керамогранит и натуральный камень точно по вашим размерам 
+            </p>
+          </div>
+          <a class="btn" href="#">
             <span>Оставить заявку</span>
           </a>
         </div>
@@ -275,8 +274,7 @@
         </div>
       </section>
 
-      <section class="causes">
-        <img class="causes__bg-img" src="assets/images/causes/bg-img.png" alt="img">
+      <section class="causes" style="background-image: url('assets/images/causes/bg-img.webp')">
         <div class="container">
           <div class="causes__wrapper">
             <div class="causes__title">
@@ -710,10 +708,10 @@
               <img src="assets/images/review/review-1.jpg" alt="review">
             </div>
           </div>
-          <div class="review__logo">
-            <div class="review__logo-img">
-              <img src="assets/images/logo.svg" alt="logo">
-            </div>
+        </div>
+        <div class="review__logo">
+          <div class="review__logo-img">
+            <img src="assets/images/logo-no-glow.png" alt="logo">
           </div>
         </div>
       </section>
@@ -786,7 +784,7 @@
                     Я даю свое согласие с политикой конфиденциальности в отношении обработки персональных данных
                   </label>
                   <button class="connection__application-form-btn btn" type="submit">
-                    Оставить заявку
+                    <span>Оставить заявку</span>
                   </button>
                 </form>
               </div>

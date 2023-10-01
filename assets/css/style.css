@@ -46,6 +46,21 @@ body {
 
 .container {
   width: 100%;
+  max-width: 1688px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+
+.container-2 {
+  width: 100%;
+  max-width: 1792px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+/* .container {
+  width: 100%;
   max-width: 1640px;
   margin: 0 auto;
   padding: 0 32px;
@@ -57,7 +72,7 @@ body {
   max-width: 1744px;
   margin: 0 auto;
   padding: 0 32px;
-}
+} */
 
 .icon {
   display: flex;
@@ -184,8 +199,8 @@ h1 {
 .header {
   position: absolute;
   left: 0;
-  right: 0;
-  z-index: 2;
+  right: -0.1rem;
+  z-index: 100;
 }
 
 .header__wrapper {
@@ -261,13 +276,14 @@ h1 {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-top: 16.43rem;
+  padding-top: 14rem;
   padding-bottom: 3rem;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-.intro__subtitle {
+.intro__wrapper h1 span {
+  display: block;
   font-family: 'RussoOne', sans-serif;
   font-weight: 400;
   font-size: 3.125rem;
@@ -275,28 +291,29 @@ h1 {
   margin-bottom: 2.35rem;
 }
 
-.intro__list {
+.intro__wrapper ul {
   max-width: 39rem;
   margin-bottom: 5.4rem;
 }
 
-.intro__list-item {
+.intro__wrapper ul li {
   position: relative;
   font-weight: 400;
-  font-size: 2.18rem;
+  font-size: 1.5rem;
   color: var(--color-white);
   padding-left: 2.75rem;
   margin-bottom: 1.8rem;
 }
 
-.intro__list-item:last-child {
+.intro__wrapper ul li:last-child {
   margin-bottom: 0;
 }
 
-.intro__list-item::before {
+.intro__wrapper ul li::before {
   position: absolute;
-  top: 1.1rem;
+  top: 50%;
   left: 0.75rem;
+  transform: translateY(-50%);
   width: 0.37rem;
   height: 0.37rem;
   border-radius: 50%;
@@ -304,7 +321,7 @@ h1 {
   content: '';
 }
 
-.intro__desc {
+.intro__wrapper p {
   max-width: 45.6rem;
   font-size: 1.875rem;
   font-weight: 400;
@@ -352,6 +369,12 @@ h1 {
   padding: 2.65rem 1rem 1.375rem 1rem;
 }
 
+.advantages__item-img img {
+  object-fit: contain;
+  object-position: left;
+  width: 100%;
+}
+
 .advantages__item.advantages__item--performance {
   transform: translateX(10px);
   padding: 2.65rem 1rem 1.375rem 14.68rem;
@@ -370,6 +393,8 @@ h1 {
 }
 
 .advantages__item.advantages__item--years .advantages__item-img {
+  display: flex;
+  align-items: flex-end;
   bottom: 0;
   left: -0.8rem;
   width: 15.25rem;
@@ -395,6 +420,7 @@ h1 {
   font-weight: 400;
 }
 .advantages__item-info-title {
+  font-family: 'RussoOne', sans-serif;
   font-size: 1.875rem;
   color: var(--color-blue);
   margin-bottom: 0.6rem;
@@ -444,6 +470,7 @@ h1 {
 
 .services h2 {
   text-align: center;
+  margin-top: 0;
   margin-bottom: 1.875rem;
 }
 
@@ -515,15 +542,6 @@ h1 {
   background-color: var(--color-dark-blue);
   background-repeat: no-repeat;
   background-position: top right;
-}
-
-.causes__bg-img {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 79.8125rem;
-  height: 61.4375rem;
-  object-fit: contain;
 }
 
 .causes__wrapper {
@@ -700,6 +718,7 @@ h1 {
   max-width: 38.1875rem;
   text-align: center;
   margin: 0 auto;
+  margin-top: 0;
   margin-bottom: 4.1875rem;
 }
 
@@ -795,6 +814,7 @@ h1 {
 .quality h2 {
   max-width: 70.4rem;
   color: var(--color-white);
+  margin-top: 0;
   margin-bottom: 4.4375rem;
 }
 .quality__items {
@@ -919,6 +939,7 @@ h1 {
 }
 
 .about-us h2 {
+  margin-top: 0;
   text-align: center;
 }
 
@@ -951,9 +972,7 @@ h1 {
   margin-right: 0;
   margin-left: 2.8125rem;
 }
-.about-us__item:nth-child(even) .about-us__item-info-text {
-  text-align: start;
-}
+
 .about-us__item-info {
   max-width: 46.25rem;
   display: flex;
@@ -967,9 +986,15 @@ h1 {
   color: var(--color-dark-blue);
   font-weight: 600;
   line-height: 1.31;
+  padding: 0;
   margin-bottom: 4.1875rem;
   text-align: right;
 }
+
+.about-us__item:last-child .about-us__item-info-text {
+  text-align: start;
+}
+
 .about-us__item-info-text svg {
   display: none;
 }
@@ -1030,6 +1055,7 @@ h1 {
 .conditions h2 {
   color: var(--color-white);
   text-align: center;
+  margin-top: 0;
   margin-bottom: 1.875rem;
 }
 .conditions__desc {
@@ -1100,6 +1126,7 @@ h1 {
 }
 
 .technology h2 {
+  margin-top: 0;
   margin-bottom: 1.875rem;
   text-align: center;
 }
@@ -1228,6 +1255,7 @@ h1 {
 
 .review h2 {
   color: var(--color-white);
+  margin-top: 0;
   margin-bottom: 2.5rem;
 }
 
@@ -1265,7 +1293,7 @@ h1 {
 }
 
 .review .slick-slide {
-  margin: 0 3.75rem;
+  margin: 0 2.75rem;
   transition: transform .4s;
 }
 
@@ -1314,6 +1342,7 @@ h1 {
   display: inline-block;
   width: 14.5625rem;
   height: 7.875rem;
+  object-fit: contain;
 }
 
 
@@ -1347,10 +1376,11 @@ h1 {
 }
 
 .connection__left {
-  max-width: 42.5rem;
+  max-width: 45.5rem;
 }
 
 .connection h2 {
+  margin-top: 0;
   margin-bottom: 2.5rem;
 }
 
@@ -1604,7 +1634,7 @@ a.footer__contacts-item-link:hover + .icon{
   display: flex;
   align-items: flex-end;
   background-size: cover;
-  padding-top: 5rem;
+  padding-top: 14rem;
   padding-bottom: 2.5625rem;
 }
 
@@ -1618,6 +1648,7 @@ a.footer__contacts-item-link:hover + .icon{
 
 .error-block h2 {
   color: var(--color-white);
+  margin-top: 0;
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -1646,8 +1677,10 @@ a.footer__contacts-item-link:hover + .icon{
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 100vh;
   background-position: center;
+  margin-top: 14rem;
+  height: 80rem;
+  overflow: hidden;
 }
 
 .gratitude::before {
@@ -1680,6 +1713,7 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 .gratitude h2 {
+  margin-top: 0;
   margin-bottom: 2.375rem;
 }
 
@@ -1728,16 +1762,25 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .container {
-    max-width: calc(1640px * 1.1334);
+    max-width: calc(1688px * 1.1334);
   }
 
 
   .container-2 {
-    max-width: cacl(1744px * 1.1334);
+    max-width: cacl(1796px * 1.1334);
   }
 }
 
-@media (max-width: 1599px) {
+@media (max-width: 1919px) {
+  .intro {
+    padding-top: 13rem;
+  }
+  .intro__wrapper ul {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 1679px) {
   html {
     font-size: var(--fs-html);
   }
@@ -1754,8 +1797,20 @@ a.footer__contacts-item-link:hover + .icon{
     font-size: 16px;
   }
 
+  .header__contacts {
+    margin-left: 5rem;
+  }
+
   .connection__application {
     width: 22.6875rem;
+  }
+
+  .container {
+    padding: 0 3rem;
+  }
+
+  .container-2 {
+    padding: 0 3rem;
   }
 
   .logo__img {
@@ -1768,7 +1823,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .intro {
-    padding-top: 14rem;
+    padding-top: 13rem;
   }
 
   h1 {
@@ -1777,41 +1832,37 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   h2 {
-    font-size: 2.8rem;
+    font-size: 2.1rem;
   }
 
   .desc {
     font-size: 1.6rem;
   }
 
-  .intro__subtitle {
+  .intro__wrapper h1 span {
     font-size: 2.5rem;
   }
 
-  .intro__list {
-    margin-bottom: 5rem
-  }
-
-  .intro__list-item {
-    font-size: 1.8rem;
-    margin-bottom: 1.6rem;
-  }
-
-  .intro__list-item::before {
-    top: 0.9rem;
-  }
-
-  .intro__desc {
+  .intro__wrapper p {
     font-size: 1.675rem;
   }
 
+  .intro__wrapper ul li {
+    margin-bottom: 1rem;
+  }
+
   .advantages__wrapper {
-    display: flex;
-    flex-direction: column;
+    gap: 1rem;
   }
 
   .advantages__wrapper::before {
     display: none;
+  }
+
+  .advantages__item.advantages__item--performance .advantages__item-img,
+  .advantages__item.advantages__item--years .advantages__item-img,
+  .advantages__item.advantages__item--days .advantages__item-img {
+    width: 45%;
   }
 
   .advantages__item.advantages__item--performance {
@@ -1821,16 +1872,28 @@ a.footer__contacts-item-link:hover + .icon{
   .advantages__item.advantages__item--performance,
   .advantages__item.advantages__item--years,
   .advantages__item.advantages__item--days {
-    padding-left: 15rem;
+    padding-left: 8rem;
   }
 
   .advantages__item.advantages__item--performance .advantages__item-img {
-    left: -1rem;
-    width: 15.125rem;
+    left: -3rem;
   }
 
   .advantages__item.advantages__item--days .advantages__item-img {
     left: -3rem;
+  }
+
+  .advantages__item-info-title {
+    margin-top: 0;
+    font-size: 1.3rem;
+  }
+
+  .advantages__item-info-desc {
+    font-size: 1rem;
+  }
+
+  .services__desc {
+    font-size: 1.375rem;
   }
 
   .services__wrapper::before,
@@ -1839,19 +1902,22 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .services__items {
-    gap: 4rem 3.6rem;
+    gap: 2rem 1.6rem;
     margin-bottom: 4rem;
   }
 
-  .services__item-img {
-    width: 20rem;
-    height: 20rem;
-    left: -5rem;
+  .services__item {
+    padding: 2.25rem 2.25rem 2.25rem 10.9rem;
   }
 
-  .causes__bg-img {
-    width: 39.8125rem;
-    height: 31.4375rem;
+  .services__item-img {
+    width: 18rem;
+    height: 18rem;
+    left: -4.5rem;
+  }
+
+  .causes {
+    background-size: 70%;
   }
 
   .causes__colums {
@@ -1859,7 +1925,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .causes__title-number {
-    font-size: 7rem;
+    font-size: 5.5rem;
   }
 
   .portfolio .slick-prev {
@@ -1903,6 +1969,18 @@ a.footer__contacts-item-link:hover + .icon{
     font-size: 1.1rem;
   }
 
+  .technology__items {
+    max-width: 65rem;
+  }
+
+  .technology__item {
+    height: 35rem;
+  }
+
+  .technology__item-title {
+    font-size: 1.4rem;
+  }
+
   .technology__wrapper::before {
     display: none;
   }
@@ -1916,11 +1994,15 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .review .slick-slide {
-    margin: 0 2.5rem;
+    margin: 0 1.5rem;
   }
 
   .connection__image.connection__image--people {
     display: none;
+  }
+
+  .connection__bg-img {
+    width: 60%;
   }
 
   .connection__image--laser {
@@ -1960,6 +2042,10 @@ a.footer__contacts-item-link:hover + .icon{
     display: none;
   }
 
+  .header__wrapper {
+    padding: 1.5rem 0;
+  }
+
   .header__contacts {
     margin-left: auto;
   }
@@ -1978,20 +2064,27 @@ a.footer__contacts-item-link:hover + .icon{
     left: -2rem;
   }
 
+  .intro {
+    padding-top: 10rem;
+  }
+
   .services__items {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem 2.6rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .services__item-box-simple {
+    max-width: 10rem;
+    width: 100%;
   }
 
   .services__item-img {
-    width: 18rem;
-    height: 18rem;
-    left: -5rem;
+    width: 16rem;
+    height: 16rem;
+    left: -3.6rem;
   }
 
   .services__item {
-    padding: 2rem 2rem 2rem 11rem;
+    padding: 2rem 2rem 2rem 10rem;
   }
 
   .services__item-box-title {
@@ -2004,10 +2097,6 @@ a.footer__contacts-item-link:hover + .icon{
 
   .causes__colums {
     grid-template-columns: 35.125rem 31rem;
-  }
-
-  .causes__bg-img {
-    display: none;
   }
 
   .quality__items {
@@ -2064,6 +2153,10 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .causes {
+    background-size: 50%;
+  }
+
+  .causes {
     padding-top: 5.5rem;
   }
 
@@ -2094,8 +2187,11 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .conditions__items {
-    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+  }
+
+  .conditions__item-img {
+    height: 10rem;
   }
 
   .about-us__item-img {
@@ -2119,22 +2215,6 @@ a.footer__contacts-item-link:hover + .icon{
     margin: 0;
   }
 
-  .connection__wrapper {
-    flex-direction: column;
-  }
-
-  .connection__bg-img {
-    width: 100%;
-  }
-
-  .connection__application {
-    width: 100%;
-    background-color: var(--color-white);
-    margin-top: 3rem;
-    padding: 2rem;
-    border-radius: 0.45rem
-  }
-
   .gratitude__img-people {
     position: static;
   }
@@ -2147,7 +2227,6 @@ a.footer__contacts-item-link:hover + .icon{
 
   .gratitude .container-2 {
     display: flex;
-    flex-direction: ;
     justify-content: center;
   }
 
@@ -2163,6 +2242,30 @@ a.footer__contacts-item-link:hover + .icon{
   }
 }
 
+@media (max-width: 1150px) {
+  .services__items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 1100px) {
+  .connection__wrapper {
+    flex-direction: column;
+  }
+
+  .connection__bg-img {
+    width: 100%;
+  }
+
+  .connection__application {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+  }
+}
+
 @media (max-width: 1023px) {
 
   .advantages,
@@ -2173,17 +2276,16 @@ a.footer__contacts-item-link:hover + .icon{
   .conditions,
   .technology,
   .review,
-  .connection,
-  .footer {
+  .connection {
     padding: 4.5rem 0;
+  }
+
+  .footer {
+    padding: 4.5rem 0 3.6rem;
   }
 
   .causes {
     padding-top: 4.5rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
   }
 
   .desc {
@@ -2203,7 +2305,6 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .intro {
-    padding-top: 11rem;
     background-position: 35%;
   }
 
@@ -2212,26 +2313,21 @@ a.footer__contacts-item-link:hover + .icon{
     margin-bottom: 0.7rem;
   }
 
-  .intro__subtitle {
+  .intro__wrapper h1 span {
     font-size: 2.2rem;
   }
 
-  .intro__list {
-    margin-bottom: 5rem
-  }
-
-  .intro__list-item {
-    font-size: 1.6rem;
-    margin-bottom: 1.6rem;
+  .intro__wrapper ul li {
     padding-left: 2.1rem;
   }
 
-  .intro__list-item::before {
-    top: 0.8rem;
+  .intro__wrapper p {
+    font-size: 1.575rem;
   }
 
-  .intro__desc {
-    font-size: 1.575rem;
+  .advantages__wrapper {
+    display: flex;
+    flex-direction: column;
   }
 
   .advantages__item {
@@ -2253,6 +2349,10 @@ a.footer__contacts-item-link:hover + .icon{
     height: 110%;
   }
 
+  .advantages__item.advantages__item--performance .advantages__item-img {
+    left: -1rem;
+  }
+
   .advantages__item.advantages__item--days .advantages__item-img{
     left: -1rem;
   }
@@ -2270,12 +2370,6 @@ a.footer__contacts-item-link:hover + .icon{
     min-height: 8.5rem;
   }
 
-  .services__item-img {
-    width: 17rem;
-    height: 17rem;
-    left: -4rem;
-  }
-
   .services__items.services__items--two-colm {
     margin-bottom: 2rem;
   }
@@ -2283,6 +2377,10 @@ a.footer__contacts-item-link:hover + .icon{
   .services__item-box-simple {
     height: 1.4rem;
     width: 8rem;
+  }
+
+  .causes {
+    background-image: none !important;
   }
 
   .causes__wrapper {
@@ -2350,6 +2448,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .conditions__items {
+    grid-template-columns: repeat(2, 1fr);
     gap: 1.3rem;
     margin-bottom: 1.4rem;
   }
@@ -2372,7 +2471,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .technology__item {
-    height: 37rem;
+    height: 30rem;
   }
 
   .technology__item:first-child::before {
@@ -2474,9 +2573,12 @@ a.footer__contacts-item-link:hover + .icon{
   .conditions,
   .technology,
   .review,
-  .connection,
-  .footer {
+  .connection {
     padding: 3.5rem 0;
+  }
+
+  .footer {
+    padding: 3.5rem 0 2.8rem;
   }
 
   .causes {
@@ -2502,6 +2604,7 @@ a.footer__contacts-item-link:hover + .icon{
 
   .intro {
     padding-top: 11rem;
+    min-height: 50rem;
   }
 
   h1 {
@@ -2509,26 +2612,20 @@ a.footer__contacts-item-link:hover + .icon{
     margin-bottom: 0.7rem;
   }
 
-  .intro__subtitle {
+  .intro__wrapper h1 span {
     font-size: 1.9rem;
   }
 
-  .intro__list {
-    margin-bottom: 4.2rem
-  }
-
-  .intro__list-item {
-    font-size: 1.3rem;
+  .intro__wrapper ul li {
     margin-bottom: 1.4rem;
   }
 
-  .intro__list-item::before {
-    top: 0.6rem;
+  .intro__wrapper ul li::before {
     width: 0.3rem;
     height: 0.3rem;
   }
 
-  .intro__desc {
+  .intro__wrapper p {
     font-size: 1.3rem;
   }
 
@@ -2553,14 +2650,6 @@ a.footer__contacts-item-link:hover + .icon{
   .advantages__item.advantages__item--years .advantages__item-img,
   .advantages__item.advantages__item--days .advantages__item-img {
     height: 100%;
-  }
-
-  .advantages__item-info-title {
-    font-size: 1.6rem;
-  }
-
-  .advantages__item-info-desc {
-    font-size: 1.1rem;
   }
 
   .services__desc {
@@ -2702,7 +2791,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .technology__item {
-    height: 28rem;
+    height: 24rem;
   }
 
   .technology__item-title {
@@ -2715,7 +2804,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .technology__item:first-child::before {
-    right: -0.92rem;
+    right: -0.59rem;
     height: 105%;
   }
 
@@ -2874,6 +2963,14 @@ a.footer__contacts-item-link:hover + .icon{
     margin-bottom: 6rem;
   }
 
+  .about-us__item-info-text {
+    text-align: center;
+  }
+
+  .about-us__item:last-child .about-us__item-info-text {
+    text-align: center;
+  }
+
   .about-us__item-info {
     display: flex;
     flex-direction: column;
@@ -2896,7 +2993,7 @@ a.footer__contacts-item-link:hover + .icon{
   .about-us__item-img {
     width: 12rem;
     height: 12rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1rem;
   }
 
   .technology__items {
@@ -2924,13 +3021,14 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .header__contacts {
-    position: absolute;
+    position: fixed;
     right: 0rem;
     top: 24rem;
     flex-direction: column;
     background-color: #F3F3F3;
     padding: 0.55rem 1rem 0.55rem 0.35rem;
     border-radius: 0.6rem 0 0 0.6rem;
+    z-index: 100;
   }
 }
 
@@ -2953,9 +3051,12 @@ a.footer__contacts-item-link:hover + .icon{
   .conditions,
   .technology,
   .review,
-  .connection,
-  .footer {
+  .connection {
     padding: 3rem 0;
+  }
+
+  .footer {
+    padding: 3rem 0 2.4rem;
   }
 
   .causes {
@@ -2979,24 +3080,15 @@ a.footer__contacts-item-link:hover + .icon{
     margin-bottom: 0.6rem;
   }
 
-  .intro__subtitle {
+  .intro__wrapper h1 span {
     font-size: 1.8rem;
   }
 
-  .intro__list {
-    margin-bottom: 4rem
-  }
-
-  .intro__list-item {
+  .intro__wrapper ul li {
     font-size: 1.1rem;
-    margin-bottom: 1.4rem;
   }
 
-  .intro__list-item::before {
-    top: 0.5rem
-  }
-
-  .intro__desc {
+  .intro__wrapper p {
     font-size: 1.1rem;
   }
 
@@ -3020,12 +3112,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .advantages__item-info-title {
-    font-size: 1.4rem;
     margin-bottom: 0.4rem;
-  }
-
-  .advantages__item-info-desc {
-    font-size: 1rem;
   }
 
   .services__item-box-title {
@@ -3085,29 +3172,37 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 @media (max-width: 413px) {
+  .header__telephone {
+    gap: 0.6rem
+  }
+
+  .header__telephone-info {
+    font-size: 0.9rem;
+  }
+
+  .header__telephone-icon .icon{
+    width: 2.125rem;
+    height: 2.125rem;
+  }
+
   h1 {
     font-size: 2rem;
     margin-bottom: 0.6rem;
   }
 
-  .intro__subtitle {
+  .intro__wrapper h1 span {
     font-size: 1.6rem;
   }
 
-  .intro__list {
+  .intro__wrapper ul {
     margin-bottom: 3rem
   }
 
-  .intro__list-item {
+  .intro__wrapper ul li {
     font-size: 1.1rem;
-    margin-bottom: 1.2rem;
   }
 
-  .intro__list-item::before {
-    top: 0.5rem
-  }
-
-  .intro__desc {
+  .intro__wrapper p {
     font-size: 1.1rem;
   }
 
@@ -3120,7 +3215,7 @@ a.footer__contacts-item-link:hover + .icon{
   .advantages__item.advantages__item--performance .advantages__item-img,
   .advantages__item.advantages__item--years .advantages__item-img,
   .advantages__item.advantages__item--days .advantages__item-img {
-    height: 90%;
+    height: 76%;
   }
 
   .advantages__item.advantages__item--performance .advantages__item-img {
@@ -3155,4 +3250,30 @@ a.footer__contacts-item-link:hover + .icon{
   html {
     font-size: 14px;
   }
+}
+
+
+
+@media (min-width: 320px) {
+  .container{padding:0 1rem}
+}
+
+@media (min-width: 360px) {
+  .container{padding:0 1.5rem}
+}
+
+@media (min-width: 500px) {
+  .container{padding:0 2rem}
+}
+
+@media (min-width: 768px) {
+  .container{padding:0 2.5rem}
+}
+
+@media (min-width: 1024px) {
+  .container{padding:0 3rem}
+}
+
+@media (min-width: 1181px) {
+  .container{padding:0 5rem}
 }
