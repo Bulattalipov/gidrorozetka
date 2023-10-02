@@ -191,6 +191,10 @@ h1 {
 }
 
 
+.desc {
+  margin-top: 0;
+}
+
 
 
 
@@ -199,7 +203,7 @@ h1 {
 .header {
   position: absolute;
   left: 0;
-  right: -0.1rem;
+  right: 0;
   z-index: 100;
 }
 
@@ -628,6 +632,8 @@ h1 {
   height: 4.06rem;
   background: linear-gradient(0deg, rgba(8, 3, 68, 0.85) 0%, rgba(8, 3, 68, 0.85) 100%), #FFF;
   border-radius: 50%;
+  font-family: 'RussoOne', sans-serif;
+  font-weight: 400;
   font-size: 2.14rem;
   flex-shrink: 0;
   text-align: center;
@@ -793,6 +799,11 @@ h1 {
   margin-top: 3.875rem;
 }
 
+.portfolio__btn:active,
+.portfolio__btn:focus {
+  display: flex;
+}
+
 .portfolio__btn span {
   display: flex;
   align-items: center;
@@ -800,6 +811,10 @@ h1 {
 
 .portfolio__btn svg {
   margin: 0 0.5rem;
+}
+
+.portfolio__btn svg:first-child {
+  margin-left: 1rem;
 }
 
 
@@ -1119,7 +1134,7 @@ h1 {
   left: -23rem;
   width: 48.125rem;
   height: 63.125rem;
-  background-image: url('../images/technology/water.png');
+  background-image: url('../images/technology/water.webp');
   background-size: cover;
   content: '';
   z-index: 3;
@@ -1827,7 +1842,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   h1 {
-    font-size: 3.2rem;
+    font-size: 2.75rem;
     margin-bottom: 0.9rem;
   }
 
@@ -1836,7 +1851,20 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .desc {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    margin-top: 0;
+  }
+
+  .advantages,
+  .services,
+  .portfolio,
+  .quality,
+  .about-us,
+  .conditions,
+  .technology,
+  .review,
+  .connection {
+    padding: 4rem 0;
   }
 
   .intro__wrapper h1 span {
@@ -1892,10 +1920,6 @@ a.footer__contacts-item-link:hover + .icon{
     font-size: 1rem;
   }
 
-  .services__desc {
-    font-size: 1.375rem;
-  }
-
   .services__wrapper::before,
   .services__wrapper::after {
     display: none;
@@ -1924,8 +1948,16 @@ a.footer__contacts-item-link:hover + .icon{
     grid-template-columns: 38.125rem 34rem;
   }
 
+  .causes__title {
+    margin-bottom: 3rem;
+  }
+
   .causes__title-number {
     font-size: 5.5rem;
+  }
+
+  .causes__item {
+    padding-bottom: 3.4rem;
   }
 
   .portfolio .slick-prev {
@@ -1966,7 +1998,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .conditions__item-desc {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
   .technology__items {
@@ -2016,7 +2048,7 @@ a.footer__contacts-item-link:hover + .icon{
 
   .connection__image.connection__image--tape {
     top: 15rem;
-    right: 9rem;
+    right: 17rem;
   }
 
   .about-us::before,
@@ -2033,6 +2065,10 @@ a.footer__contacts-item-link:hover + .icon{
     right: -32rem;
     width: 85rem;
     height: 39rem;
+  }
+
+  .services__desc {
+    margin-bottom: 3rem;
   }
 
 }
@@ -2140,22 +2176,6 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 @media (max-width: 1199px) {
-  .advantages,
-  .services,
-  .portfolio,
-  .quality,
-  .about-us,
-  .conditions,
-  .technology,
-  .review,
-  .connection {
-    padding: 5.5rem 0;
-  }
-
-  .causes {
-    background-size: 50%;
-  }
-
   .causes {
     padding-top: 5.5rem;
   }
@@ -2163,6 +2183,7 @@ a.footer__contacts-item-link:hover + .icon{
   .causes__colums {
     display: flex;
     flex-direction: column;
+    max-width: 47rem;
   }
 
   .causes__item:last-child {
@@ -2249,47 +2270,18 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 @media (max-width: 1100px) {
-  .connection__wrapper {
-    flex-direction: column;
-  }
-
   .connection__bg-img {
-    width: 100%;
-  }
-
-  .connection__application {
-    width: 100%;
-    margin-top: 4rem;
-    padding: 2rem;
-    background-color: var(--color-white);
-    border-radius: 1rem;
+    width: 58%;
   }
 }
 
 @media (max-width: 1023px) {
-
-  .advantages,
-  .services,
-  .portfolio,
-  .quality,
-  .about-us,
-  .conditions,
-  .technology,
-  .review,
-  .connection {
-    padding: 4.5rem 0;
-  }
-
   .footer {
-    padding: 4.5rem 0 3.6rem;
+    padding: 3rem 0;
   }
 
   .causes {
     padding-top: 4.5rem;
-  }
-
-  .desc {
-    font-size: 1.4rem;
   }
 
   .header__contacts-text {
@@ -2306,6 +2298,7 @@ a.footer__contacts-item-link:hover + .icon{
 
   .intro {
     background-position: 35%;
+    min-height: 50rem;
   }
 
   h1 {
@@ -2358,7 +2351,7 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   .services__desc {
-    margin-bottom: 3.6rem;
+    margin-bottom: 2.8rem;
   }
 
   .services__items {
@@ -2385,10 +2378,6 @@ a.footer__contacts-item-link:hover + .icon{
 
   .causes__wrapper {
     margin-left: 0;
-  }
-
-  .causes__title {
-    margin-bottom: 4rem;
   }
 
   .causes__title-number {
@@ -2521,6 +2510,29 @@ a.footer__contacts-item-link:hover + .icon{
     padding: 2.2rem 0.25rem;
   }
 
+  .connection__wrapper {
+    flex-direction: column;
+  }
+
+  .connection__bg-img {
+    width: 100%;
+  }
+
+  .connection__application {
+    max-width: 33rem;
+    width: 100%;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border-radius: 1rem;
+  }
+
+  .connection__image.connection__image--tape {
+    right: 3rem;
+  }
+
   .connection__list-item-text {
     font-size: 1.05rem;
   }
@@ -2577,10 +2589,6 @@ a.footer__contacts-item-link:hover + .icon{
     padding: 3.5rem 0;
   }
 
-  .footer {
-    padding: 3.5rem 0 2.8rem;
-  }
-
   .causes {
     padding-top: 4.5rem;
   }
@@ -2604,7 +2612,6 @@ a.footer__contacts-item-link:hover + .icon{
 
   .intro {
     padding-top: 11rem;
-    min-height: 50rem;
   }
 
   h1 {
@@ -2650,10 +2657,6 @@ a.footer__contacts-item-link:hover + .icon{
   .advantages__item.advantages__item--years .advantages__item-img,
   .advantages__item.advantages__item--days .advantages__item-img {
     height: 100%;
-  }
-
-  .services__desc {
-    margin-bottom: 3.2rem;
   }
 
   .services__items {
@@ -2877,6 +2880,21 @@ a.footer__contacts-item-link:hover + .icon{
 }
 
 @media (max-width: 650px) {
+
+  .intro {
+    padding-top: 9rem;
+    min-height: 40rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .intro__wrapper ul li {
+    margin-bottom: 0.9rem;
+  }
+
+
   .services__items {
     display: flex;
     flex-direction: column;
@@ -2894,16 +2912,20 @@ a.footer__contacts-item-link:hover + .icon{
     left: -1rem;
   }
 
+  .services__items.services__items--two-colm {
+    margin-bottom: 0.4rem;
+  }
+
+  .causes__title {
+    margin-bottom: 2rem;
+  }
+
   .causes__item {
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
   }
 
   .causes__item::after {
     left: 1.65rem;
-  }
-
-  .causes__title {
-    margin-bottom: 3rem;
   }
 
   .causes__title-number {
@@ -2919,6 +2941,14 @@ a.footer__contacts-item-link:hover + .icon{
   .causes__item-number::before {
     width: 2.6rem;
     height: 2.6rem;
+  }
+
+  .causes__item-info-title {
+    font-size: 1.125rem;
+  }
+
+  .causes__item-info-desc {
+    font-size: 0.9rem;
   }
 
   .quality .quality__item {
@@ -3023,7 +3053,7 @@ a.footer__contacts-item-link:hover + .icon{
   .header__contacts {
     position: fixed;
     right: 0rem;
-    top: 24rem;
+    top: 21rem;
     flex-direction: column;
     background-color: #F3F3F3;
     padding: 0.55rem 1rem 0.55rem 0.35rem;
@@ -3076,7 +3106,6 @@ a.footer__contacts-item-link:hover + .icon{
   }
 
   h1 {
-    font-size: 2.4rem;
     margin-bottom: 0.6rem;
   }
 
@@ -3135,39 +3164,39 @@ a.footer__contacts-item-link:hover + .icon{
     width: 5%;
   }
 
-  .quality__item img{
-    display: none;
-  }
-
   .quality .quality__item {
     padding: 1rem 1rem 1rem 1rem;
   }
-
-  /* .quality__item:nth-child(1) img {
-    width: 8.9rem;
-    height: 13.3rem;
-  }
-
-  .quality__item:nth-child(2) .quality__item-img img {
-    width: 12.5493rem;
-    height: 8.625rem;
-  }
-
-  .quality__item:nth-child(3) img {
-    width: 15.75rem;
-    height: 8.25rem;
-  }
-
-  .quality__item:nth-child(3) .quality__item-img {
-    left: -4.5rem;
-  } */
 
   .connection__application {
     padding: 1rem;
   }
 
+  .quality__item-img {
+    position: static;
+    width: auto;
+  }
+
+  .quality__item:nth-child(1) img {
+    width: 7.9rem;
+    height: 11.8rem;
+  }
+
+  .quality__item:nth-child(3) img {
+    width: 12.75rem;
+    height: 8.25rem;
+  }
+
   .error-block {
     align-items: center;
+  }
+
+  .desc {
+    margin-bottom: 2.2rem;
+  }
+
+  .intro__wrapper ul {
+    max-width: 20rem;
   }
 }
 
