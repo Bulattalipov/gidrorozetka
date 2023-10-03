@@ -2186,6 +2186,10 @@ a.footer__contacts-item-link:hover + .icon{
     max-width: 47rem;
   }
 
+  .causes__item-info {
+    max-width: 100% !important;
+  }
+
   .causes__item:last-child {
     min-height: auto;
   }
